@@ -102,8 +102,26 @@ public class DoublyLinkedList { // class = blueprint for an object
        
       Node successor = currentNode.next;
       Node predecessor = currentNode.previous;
+      if (successor==null && predecessor == null){
+          head = null;
+          tail = null;
+      }
+      else if(successor == null){
+          predecessor.next=null;
+          tail = predecessor;
+      }
+      else if(predecessor == null){
+          successor.previous = null;
+          head = successor;
+      }
+      else{
+          successor.previous = predecessor;
+          predecessor.next = successor;
+      }
+       currentNode.next = null;
+       currentNode.previous = null;
       size--;
-      
+      /*
       if (successor != null)
          successor.previous = predecessor;
          
@@ -115,6 +133,7 @@ public class DoublyLinkedList { // class = blueprint for an object
          
       if (currentNode == tail)
          tail = predecessor;
+*/
    }
     
    public int size(){
