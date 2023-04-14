@@ -43,26 +43,23 @@ public class DLList {
       
       // Output final list
       System.out.print("List after removing nodes: ");
-      numList.printList();
-      numList.append(nodeA);   // Add 14
-      numList.append(nodeB);   // Add 2, make the tail
-      numList.append(nodeC);
-      System.out.println(numList.size());
+      numList.printList();   
       
        System.out.println("Printing in reverse");
-       //numList.reverseList();
+       numList.reverseList();
        
        System.out.println("The maximum of the list: " + numList.max());
        
        System.out.println("The minimum of the list: " + numList.min());
-       System.out.println("The size of my linked lise:" + numList.size());
+       System.out.println("The size of my linked list:" + numList.size());
        int[] myTestArr= numList.toArray();
        for(int i=0; i<myTestArr.length;i++){
            System.out.println(myTestArr[i]);
-           System.out.println("The size of my linked lise:" + numList.indexOf(2));
-           
+                    
        }
-       numList.sumlast(5);
-        System.out.println("The sum of the last 2 items is:" + numList.sumlast(2));
+        System.out.println("The index of element 2 is: " + numList.indexOf(2));
+       
+        System.out.println("The sum of the last 2 items is: " + numList.sumlast(2));
+
     }
 }
